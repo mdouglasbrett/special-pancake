@@ -1,0 +1,14 @@
+.c-card {
+    float: left;
+    max-width: 344px;
+    padding: 12px;
+    margin-right: 12px;
+}
+
+.c-card > * {
+    max-width: 320px;
+}
+
+.c-card:last-of-type {
+    margin-right: unset;
+}
