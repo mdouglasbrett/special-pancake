@@ -1,13 +1,20 @@
 // @flow
 import React from 'react';
+import './Card.css'
+import '../Tweet/Tweet'
+import Tweet from "../Tweet/Tweet";
 
 const Card = (props) => {
-  console.log('Card Props: ', props);
-  const { item_data: itemData, ...rest } = props;
-  console.log('ItemData: ', itemData);
-
+  const { type, item_data: itemData, ...rest } = props;
+  if (props.type === 'tweet') {
+    console.log('props for items: ', props);
+  }
   return (
-    <div />
+    <div className="c-card">
+      { type === 'instagram' && <img src="http://placehold.it/320x320" /> }
+      { type === 'twitter' && <Tweet {...itemData} /> }
+      { type === 'manual' && <img src="https://placehold.it/320x320" /> }
+    </div>
   )
 };
 
