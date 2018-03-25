@@ -11,8 +11,19 @@ import reducer from './reducers/reducers';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import { fetchItems, receiveItems } from './actions/actions';
 
 const store = createStore(reducer, compose(applyMiddleware(thunk)));
+
+const initialLoad = async () => {
+  store.dispatch(fetchItems());
+  const response = await fetch('http://private-cc77e-aff.apiary-mock.com/posts');
+  return await response.json();
+};
+
+initialLoad()
+  .then(response =>
+    store.dispatch(receiveItems(response)));
 
 ReactDOM.render(
   <Provider store={store}>
