@@ -15,15 +15,17 @@ import { fetchItems, receiveItems } from './actions/actions';
 
 const store = createStore(reducer, compose(applyMiddleware(thunk)));
 
-const initialLoad = async () => {
-  store.dispatch(fetchItems());
-  const response = await fetch('http://private-cc77e-aff.apiary-mock.com/posts');
-  return await response.json();
-};
+// const initialLoad = async () => {
+//   store.dispatch(fetchItems());
+//   const response = await fetch('http://private-cc77e-aff.apiary-mock.com/posts');
+//   return await response.json();
+// };
+//
+// initialLoad()
+//   .then(response =>
+//     store.dispatch(receiveItems(response)));
 
-initialLoad()
-  .then(response =>
-    store.dispatch(receiveItems(response)));
+store.dispatch(receiveItems());
 
 ReactDOM.render(
   <Provider store={store}>
