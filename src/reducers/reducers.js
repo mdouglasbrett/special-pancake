@@ -7,9 +7,7 @@ const initialFeedState = {
 };
 
 const initialFilterState = {
-  instagram: false,
-  twitter: false,
-  manual: false
+  activeFilters: []
 };
 
 function feed(state = initialFeedState, action) {
@@ -44,6 +42,16 @@ function feed(state = initialFeedState, action) {
 
 function filters(state = initialFilterState, action) {
   switch (action.type) {
+    case 'ADD_FILTER':
+      return {
+        ...state,
+        activeFilters: [...state.activeFilters, action.payload]
+      };
+    case 'REMOVE_FILTER':
+      return {
+        ...state,
+        activeFilters: state.activeFilters.filter(f => f !== action.payload)
+      };
     default:
       return state;
   }

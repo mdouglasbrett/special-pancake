@@ -2,8 +2,10 @@
 import React from 'react';
 
 const Filters = (props) => {
-  const filters = Object.keys(props.filters)
-    .map((filter, index) => <input key={index} type="checkbox" name={filter} onClick={props.onFilterToggle}/> );
+  const filters = ['instagram', 'twitter', 'manual']
+    .map((filter, index) => <input key={index} type="checkbox" name={filter} onClick={() => {
+      props.onFilterToggle(filter)
+    }}/> );
   return (
     <div>
       {filters}

@@ -31,7 +31,10 @@ export const receiveItems = (/* response */) => {
 };
 
 export const toggleFilter = (id) => {
-  return;
+  return {
+    type: 'TOGGLE_FILTER',
+    payload: id
+  }
 };
 
 // export const loadMoreItems = () => {
