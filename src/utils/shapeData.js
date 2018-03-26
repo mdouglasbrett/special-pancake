@@ -1,7 +1,6 @@
 const shapeTwitterData = (item) => {
-  const {item_data: itemData } = item;
+  const {item_data: itemData, ...rest } = item;
   const shaped = {
-    ...item,
     ...itemData,
     type: 'twitter'
   };
@@ -9,16 +8,18 @@ const shapeTwitterData = (item) => {
 };
 
 const shapeInstagramData = (item) => {
+  const { item_data: itemData, ...rest } = item;
   const shaped = {
-    ...item,
+    ...itemData,
     type: 'instagram'
   };
   return shaped;
 };
 
 const shapeManualData = (item) => {
+  const { item_data: itemData, ...rest } = item;
   const shaped = {
-    ...item,
+    ...itemData,
     type: 'manual'
   };
   return shaped;

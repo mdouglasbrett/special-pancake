@@ -3,17 +3,25 @@ import React from 'react';
 import './Card.css'
 import '../Tweet/Tweet'
 import Tweet from "../Tweet/Tweet";
+import ManualPost from '../ManualPost/ManualPost';
+import Instagram from '../Instagram/Instagram';
 
 const Card = (props) => {
-  const { type, item_data: itemData, ...rest } = props;
+  const { type, ...rest } = props;
   if (props.type === 'tweet') {
-    console.log('props for items: ', props);
+    console.log('props for tweets: ', props);
+  }
+  if (props.type === 'instagram') {
+    console.log('props for insta: ', props);
+  }
+  if (props.type === 'manual') {
+    console.log('props for manual', props);
   }
   return (
     <div className="c-card">
-      { type === 'instagram' && <img src="http://placehold.it/320x320" /> }
-      { type === 'twitter' && <Tweet {...itemData} /> }
-      { type === 'manual' && <img src="https://placehold.it/320x320" /> }
+      { type === 'instagram' && <Instagram {...rest} /> }
+      { type === 'twitter' && <Tweet {...rest} /> }
+      { type === 'manual' && <ManualPost {...rest} /> }
     </div>
   )
 };
