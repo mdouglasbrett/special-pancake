@@ -30,6 +30,10 @@ export const receiveItems = (/* response */) => {
   }
 };
 
+export const toggleFilter = (id) => {
+  return;
+};
+
 // export const loadMoreItems = () => {
 //   return {
 //     type: 'LOAD_MORE',
