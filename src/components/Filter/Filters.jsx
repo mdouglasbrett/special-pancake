@@ -1,11 +1,16 @@
 // @flow
+// TODO: don't forget to sort out the keys!!
 import React from 'react';
 
 const Filters = (props) => {
   const filters = ['instagram', 'twitter', 'manual']
-    .map((filter, index) => <input key={index} type="checkbox" name={filter} onClick={() => {
+    .map((filter, index) => (
+      <span key={index}>
+        <label>{filter}</label>
+        <input key={index} type="checkbox" name={filter} onClick={() => {
       props.onFilterToggle(filter)
-    }}/> );
+    }}/>
+      </span>) );
   return (
     <div>
       {filters}

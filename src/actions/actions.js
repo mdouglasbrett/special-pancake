@@ -30,10 +30,26 @@ export const receiveItems = (/* response */) => {
   }
 };
 
-export const toggleFilter = (id) => {
+const addFilter = (id) => {
   return {
-    type: 'TOGGLE_FILTER',
+    type: 'ADD_FILTER',
     payload: id
+  }
+};
+
+const removeFilter = (id) => {
+  return {
+    type: 'REMOVE_FILTER',
+    payload: id
+  }
+};
+
+export const toggleFilter = (id) => (dispatch, getState) => {
+  const filters = getState().filters.activeFilters;
+  if (!filters.includes(id)) {
+    dispatch(addFilter(id))
+  } else {
+    dispatch(removeFilter(id))
   }
 };
 
