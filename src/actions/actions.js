@@ -53,11 +53,8 @@ export const toggleFilter = (id) => (dispatch, getState) => {
   }
 };
 
-// export const loadMoreItems = () => {
-//   return {
-//     type: 'LOAD_MORE',
-//     payload: {
-//       message: 'Clicked the button'
-//     }
-//   }
-// };
+export const getItems = () => {
+  return {
+    type: 'REQUEST_ITEMS'
+  }
+};

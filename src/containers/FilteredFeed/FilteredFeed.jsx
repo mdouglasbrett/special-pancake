@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Feed from '../../components/Feed/Feed';
-import { toggleFilter } from '../../actions/actions';
+import { toggleFilter, getItems } from '../../actions/actions';
 
 const mapStateToProps = (state) => {
   const { feed, filters } = state;
@@ -14,7 +14,8 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  onFilterToggle: (id) => dispatch(toggleFilter(id))
+  onFilterToggle: (id) => dispatch(toggleFilter(id)),
+  onButtonPress: () => dispatch(getItems())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Feed);
