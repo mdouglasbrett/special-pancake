@@ -53,8 +53,33 @@ export const toggleFilter = (id) => (dispatch, getState) => {
   }
 };
 
-export const getItems = () => {
+const getItemsError = () => {
   return {
-    type: 'REQUEST_ITEMS'
+    type: 'GET_ITEMS_ERROR',
+    payload: {
+      isFetching: false
+    }
+  };
+};
+
+const getItemsRequest = () => {
+  return {
+    type: 'GET_ITEMS_REQUEST',
+    payload: {
+      isFetching: true
+    }
+  };
+};
+
+export const getItems = (params) => {
+  return {
+    actions: {
+      error: getItemsError,
+      start: getItemsRequest,
+      success: data => receiveItems(data)
+    },
+    type: 'GET_ITEMS',
+    params
+
   }
 };
