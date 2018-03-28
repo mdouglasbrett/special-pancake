@@ -10,12 +10,12 @@ export const fetchItems = () => {
   }
 };
 
-export const receiveItems = (/* response */) => {
-  if (true /*response.items */) {
+export const receiveItems = (response) => {
+  if (/* true */response.items) {
     return {
       type: 'RECEIVE_ITEMS',
       payload: {
-        items: shapeData(dummyData.items),
+        items: shapeData(response.items/*dummyData.items*/),
         isFetching: false
       }
     }
@@ -53,7 +53,8 @@ export const toggleFilter = (id) => (dispatch, getState) => {
   }
 };
 
-const getItemsError = () => {
+const getItemsError = (error) => {
+  console.log('There was an error: ', error);
   return {
     type: 'GET_ITEMS_ERROR',
     payload: {
@@ -63,6 +64,7 @@ const getItemsError = () => {
 };
 
 const getItemsRequest = () => {
+  console.log('Request started');
   return {
     type: 'GET_ITEMS_REQUEST',
     payload: {
@@ -78,8 +80,9 @@ export const getItems = (params) => {
       start: getItemsRequest,
       success: data => receiveItems(data)
     },
-    type: 'GET_ITEMS',
-    params
+    type: 'CALL_API',
+    params,
+    method: 'GET'
 
   }
 };
