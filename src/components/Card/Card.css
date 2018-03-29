@@ -1,14 +1,19 @@
 .c-card {
-    float: left;
-    max-width: 344px;
-    padding: 12px;
-    margin-right: 12px;
+  float: left;
+  max-width: 344px;
+  margin-right: 1em;
+  padding: 1em;
+  border-radius: 1%;
+  box-shadow: 3px 2px 4px rgba(0,0,0,0.10), -2px 3px 4px rgba(0,0,0,.10), 0px -2px 4px rgba(0,0,0,.10);
 }
 
-.c-card > * {
-    max-width: 320px;
+@supports (grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))) {
+  .c-card {
+    max-width: 100%;
+    margin-right: 0;
+  }
 }
 
 .c-card:last-of-type {
-    margin-right: unset;
+  margin-right: 0;
 }

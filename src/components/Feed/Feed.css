@@ -1,0 +1,13 @@
+.c-feed {
+  width: 90%; /* Fallback */
+  width: 90vw;
+  margin: auto;
+}
+
+@supports (grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))) {
+  .c-feed {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 24px;
+  }
+}
