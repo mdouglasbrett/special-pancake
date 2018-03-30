@@ -11,11 +11,11 @@ const Feed = (props) => {
     <Card key={index} {...item} />);
   return (
     <div>
-      <Filters onFilterToggle={onFilterToggle} />
+      <Filters onFilterToggle={onFilterToggle} activeFilters={props.activeFilters} />
         <section className="c-feed">
           {cards}
         </section>
-      <Button onClick={onButtonPress} />
+      <Button className="c-button" onClick={onButtonPress} />
     </div>
   )
 };

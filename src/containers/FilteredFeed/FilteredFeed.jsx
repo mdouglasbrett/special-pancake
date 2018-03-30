@@ -9,7 +9,8 @@ const mapStateToProps = (state) => {
     filteredItems = feed.items.filter(i => filters.activeFilters.includes(i.type));
   }
   return {
-    items: filteredItems ? filteredItems : feed.items
+    items: filteredItems ? filteredItems : feed.items,
+    activeFilters: filters.activeFilters
   }
 };
 

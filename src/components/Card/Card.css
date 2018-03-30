@@ -1,9 +1,9 @@
 .c-card {
   float: left;
+  position: relative;
   max-width: 344px;
   margin-right: 1em;
   padding: 1em;
-  border-radius: 1%;
   box-shadow: 3px 2px 4px rgba(0,0,0,0.10), -2px 3px 4px rgba(0,0,0,.10), 0px -2px 4px rgba(0,0,0,.10);
 }
 
@@ -16,4 +16,15 @@
 
 .c-card:last-of-type {
   margin-right: 0;
+}
+
+.c-card__image-label {
+  width: 50px;
+  height: 50px;
+  border-radius: 20%;
+  position: absolute;
+  top: calc(1em / -1);
+  left: calc(1em / 2);
+  background-color: white;
+  z-index: 100;
 }

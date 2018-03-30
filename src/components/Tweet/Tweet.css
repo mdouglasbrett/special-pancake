@@ -1,3 +1,6 @@
 .c-tweet {
-    border: 2px dashed rebeccapurple;
+  border: 2px dashed rebeccapurple;
+  display: flex;
+  flex-flow: column;
 }
+

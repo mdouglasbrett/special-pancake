@@ -1,3 +1,22 @@
 .c-instagram {
-    border: 2px dashed red;
+  display: flex;
+  flex-flow: column;
+  position: relative;
+}
+
+.c-instagram__header {}
+
+.c-instagram__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.c-instagram__username {
+  color: #262626;
+  font-weight: 600;
+}
+
+.c-instagram__caption {
+  color: #000000;
 }
