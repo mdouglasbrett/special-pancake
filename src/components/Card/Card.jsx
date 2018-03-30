@@ -8,17 +8,25 @@ import Instagram from '../Instagram/Instagram';
 
 const Card = (props) => {
   const { type, ...rest } = props;
-  if (props.type === 'tweet') {
-    console.log('props for tweets: ', props);
+  let labelSrc = '';
+  console.log('Props: ', props);
+  switch (true) {
+    case type === 'twitter':
+      labelSrc = '/twitter_logo.png';
+      break;
+    case type === 'instagram':
+      labelSrc = '/instagram_logo.png';
+      break;
+    case type === 'manual':
+      labelSrc = '/aff_logo.jpg';
+      break;
+    default:
+      break;
   }
-  if (props.type === 'instagram') {
-    console.log('props for insta: ', props);
-  }
-  if (props.type === 'manual') {
-    console.log('props for manual', props);
-  }
+
   return (
     <div className="c-card">
+      <img className="c-card__image-label" src={labelSrc} />
       { type === 'instagram' && <Instagram {...rest} /> }
       { type === 'twitter' && <Tweet {...rest} /> }
       { type === 'manual' && <ManualPost {...rest} /> }
