@@ -2,14 +2,8 @@
   text-align: center;
 }
 
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/*Utilities*/
-
-.u-title {
-  font-family: 'Lobster', cursive;
+.c-avatar {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
 }

@@ -1,9 +1,12 @@
+import _ from 'lodash';
+
 const shapeTwitterData = (item) => {
   const {item_data: itemData, ...rest } = item;
   const shaped = {
     ...itemData,
     type: 'twitter'
   };
+  shaped.user.name = _.startCase(shaped.user.name);
   return shaped;
 };
 

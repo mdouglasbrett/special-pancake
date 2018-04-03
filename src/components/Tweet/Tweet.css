@@ -1,6 +1,32 @@
 .c-tweet {
-  border: 2px dashed rebeccapurple;
+  display: block;
+  margin-left: 58px; /* icon width + approx .5em */
+  margin-top: 2em;
+  position: relative;
+  text-align: left;
+}
+
+.c-tweet__header {
+  display: inline-flex;
+}
+
+.c-tweet__avatar {
+  left: -58px;
+  position: absolute;
+}
+
+.c-tweet__fullname {
   display: flex;
-  flex-flow: column;
+  max-width: 100%;
+}
+
+.c-tweet__name {
+  color: #14171a;
+}
+
+.c-tweet__handle {
+  color: #657786;
+  font-weight: normal;
+  margin-left: .5em;
 }
 
