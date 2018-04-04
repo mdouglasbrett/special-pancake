@@ -4,19 +4,28 @@
   position: relative;
 }
 
-.c-instagram__header {}
+.c-instagram__header {
+  align-items: center;
+  border-bottom: 1px solid #efefef;
+  display: inline-flex;
+  margin-top: 1em;
+  max-width: 100%;
+  padding-bottom: 1em;
+  order: 1;
+}
 
 .c-instagram__avatar {
-  width: 40px;
-  height: 40px;
   border-radius: 50%;
+  height: 40px;
+  width: 40px;
 }
 
 .c-instagram__username {
   color: #262626;
-  font-weight: 600;
+  margin-left: 1em;
 }
 
 .c-instagram__caption {
   color: #000000;
+  order: 2;
 }
