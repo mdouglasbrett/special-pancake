@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-snapshot';
 import {
     createStore,
     applyMiddleware,
@@ -20,7 +20,7 @@ const store = createStore(reducer, compose(applyMiddleware(...[api(), thunk])));
 store.dispatch(getItems());
 
 
-ReactDOM.render(
+render(
   <Provider store={store}>
     <App />
   </Provider>, document.getElementById('root'));
