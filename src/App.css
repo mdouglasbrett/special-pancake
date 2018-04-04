@@ -1,9 +1,42 @@
-.app {
-  text-align: center;
+.c-header {
+  background: url('/aff.jpg') no-repeat center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  height: 500px;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+}
+
+.c-header span {
+  display: block;
+  font-size: 4em;
+  line-height: normal;
+}
+
+@media screen and (min-width: 420px)  {
+  .c-header {
+    height: 75vh;
+    justify-content: flex-end;
+  }
+
+  .c-header span {
+    font-size: 5em;
+    padding-right: 1em;
+  }
 }
 
 .c-avatar {
   border-radius: 50%;
   height: 50px;
   width: 50px;
+}
+
+.u-title {
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.5em;
+  font-weight: bold;
 }
