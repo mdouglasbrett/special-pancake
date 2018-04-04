@@ -1,10 +1,10 @@
 .c-card {
+  box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.10), -2px 3px 2px rgba(0, 0, 0, .10), 0 -2px 2px rgba(0, 0, 0, .10);
   float: left;
-  position: relative;
-  max-width: 344px;
   margin-right: 1em;
+  max-width: 344px;
   padding: 1em;
-  box-shadow: 3px 2px 4px rgba(0,0,0,0.10), -2px 3px 4px rgba(0,0,0,.10), 0px -2px 4px rgba(0,0,0,.10);
+  position: relative;
 }
 
 @supports (grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))) {
@@ -19,12 +19,12 @@
 }
 
 .c-card__image-label {
-  width: 50px;
-  height: 50px;
+  background-color: white;
   border-radius: 20%;
+  height: 50px;
+  left: calc(1em / 2);
   position: absolute;
   top: calc(1em / -1);
-  left: calc(1em / 2);
-  background-color: white;
+  width: 50px;
   z-index: 100;
 }
