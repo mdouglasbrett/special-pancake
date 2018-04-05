@@ -28,7 +28,7 @@ export default function api() {
 
     store.dispatch(onStart());
 
-    let url = 'http://private-cc77e-aff.apiary-mock.com/posts';
+    let url = 'https://private-cc77e-aff.apiary-mock.com/posts';
     // TODO: look at fetch() api to see how it handles methods/params etc
     // if (method === 'get' && action.params && Object.keys(action.params).length > 0) {
     //   url += `?${...action.params}`;
