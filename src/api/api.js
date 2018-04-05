@@ -2,7 +2,7 @@
 // TODO: return mock data if behind 'development' flag
 
 import _ from 'lodash';
-import data from '../actions/affMock';
+// import data from '../actions/affMock';
 
 const methods = ['get', 'post', 'put', 'delete'];
 
@@ -35,12 +35,12 @@ export default function api() {
     // }
 
     try {
-      // const response = await fetch(url, {method});
-      // if (!response.ok) {
-      //   // TODO: error handling with fetch()?
-      //   throw new Error('Problem with the fetch')
-      // }
-      // const data = await response.json();
+      const response = await fetch(url, {method});
+      if (!response.ok) {
+        // TODO: error handling with fetch()?
+        throw new Error('Problem with the fetch')
+      }
+      const data = await response.json();
       store.dispatch(onSuccess(data));
     } catch (error) {
       const { dispatch } = store;

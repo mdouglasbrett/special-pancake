@@ -1,5 +1,4 @@
 import shapeData from '../utils/shapeData';
-import dummyData from './affMock.js';
 
 export const fetchItems = () => {
   return {
@@ -11,11 +10,11 @@ export const fetchItems = () => {
 };
 
 export const receiveItems = (response) => {
-  if (/* true */response.items) {
+  if (response.items) {
     return {
       type: 'RECEIVE_ITEMS',
       payload: {
-        items: shapeData(response.items/*dummyData.items*/),
+        items: shapeData(response.items),
         isFetching: false
       }
     }
