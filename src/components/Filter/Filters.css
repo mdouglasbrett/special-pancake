@@ -1,16 +1,14 @@
 .c-filters {
-  /*padding: 1em;*/
-  background-color: #efefef;
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: space-evenly;
   margin-bottom: 1.5em;
   text-align: center;
 }
 
 .c-filter {
+  flex-grow: 1;
   position: relative;
-  flex-grow: 1
 }
 
 .c-filter:nth-of-type(2) {
@@ -22,19 +20,22 @@
   flex-grow: 1;
 }
 
-
 .c-filter__input {
+  clip: rect(0, 0, 0, 0);
   position: absolute;
-  clip: rect(0,0,0,0);
 }
 
 .c-filter__label {
+  background-color: #efefef;
+  cursor: pointer;
   display: block;
   padding: 1em;
+  transition: background-color ease .3s;
 }
 
 .c-filter__input:checked + .c-filter__label {
-  background-color: #262626;
+  background-color: #bababa;
   color: white;
+  transition: background-color ease .3s;
 }
 

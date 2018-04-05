@@ -1,6 +1,5 @@
 .c-feed {
-  width: 90%; /* Fallback */
-  width: 90vw;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -10,4 +9,9 @@
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 24px;
   }
+}
+
+.c-feed__heading {
+  font-size: 2em;
+  text-align: center;
 }

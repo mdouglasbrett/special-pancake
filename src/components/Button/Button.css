@@ -2,13 +2,25 @@
   background-color: #efefef;
   border: none;
   box-shadow: none;
+  cursor: pointer;
   display: block;
   margin-top: 1em;
   padding: 1em;
   width: 100%;
 }
 
+.c-button--loading {
+  background-color: #bababa;
+  color: white;
+}
+
 .c-button:active {
-  background-color: #262626;
+  background-color: #bababa;
+  color: white;
+}
+
+.c-button__loading-message {
+  display: inline-flex;
+  justify-content: center;
   color: white;
 }

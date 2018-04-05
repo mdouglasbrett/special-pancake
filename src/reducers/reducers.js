@@ -12,10 +12,10 @@ const initialFilterState = {
 
 function feed(state = initialFeedState, action) {
   switch (action.type) {
-    case 'FETCH_ITEMS':
+    case 'GET_ITEMS_REQUEST':
       return {
         ...state,
-        isFetching: action.payload.isFetching
+        isFetching: true
       };
     case 'RECEIVE_ITEMS':
       return {

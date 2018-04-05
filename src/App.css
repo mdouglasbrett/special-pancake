@@ -1,10 +1,11 @@
 .c-header {
   background: url('/aff.jpg') no-repeat center;
+  background-color: #14171a;
   background-size: cover;
   color: white;
   display: flex;
   height: 500px;
-  height: 90vh;
+  height: 75vh;
   justify-content: center;
   align-items: center;
   width: 100%;

@@ -10,7 +10,8 @@ const mapStateToProps = (state) => {
   }
   return {
     items: filteredItems ? filteredItems : feed.items,
-    activeFilters: filters.activeFilters
+    activeFilters: filters.activeFilters,
+    isFetching: feed.isFetching
   }
 };
 

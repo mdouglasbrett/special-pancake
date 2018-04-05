@@ -9,7 +9,6 @@ import Instagram from '../Instagram/Instagram';
 const Card = (props) => {
   const { type, ...rest } = props;
   let labelSrc = '';
-  console.log('Props: ', props);
   switch (true) {
     case type === 'twitter':
       labelSrc = '/twitter_logo.png';
