@@ -23,7 +23,6 @@ const Filters = (props) => {
       </span>) );
   return (
     <div className="c-filters">
-      <h2 className="c-filters__heading u-title">Filter your feed...</h2>
       {filters}
     </div>
   );

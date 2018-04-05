@@ -1,16 +1,21 @@
 .c-filters {
-  padding: 1em;
+  /*padding: 1em;*/
+  background-color: #efefef;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  border: 1px solid black;
   margin-bottom: 1.5em;
+  text-align: center;
 }
 
 .c-filter {
   position: relative;
-  border: 2px solid lightsalmon;
   flex-grow: 1
+}
+
+.c-filter:nth-of-type(2) {
+  border-left: 2px solid white;
+  border-right: 2px solid white;
 }
 
 .c-filters__heading {
@@ -29,6 +34,7 @@
 }
 
 .c-filter__input:checked + .c-filter__label {
-  background-color: greenyellow;
+  background-color: #262626;
+  color: white;
 }
 
