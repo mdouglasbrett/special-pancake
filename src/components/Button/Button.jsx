@@ -13,7 +13,10 @@ const Button = (props) => {
   return (
     <button className={`${classname} u-title`} onClick={props.onClick}>
       {
-        props.isFetching && <span className="c-button__loading-message"><span>Loading</span><Ellipsis /></span>
+        props.isFetching && <span className="c-button__loading-message">
+          <span>Loading</span>
+          <Ellipsis />
+        </span>
 
       }
       {

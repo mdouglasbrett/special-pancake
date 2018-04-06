@@ -20,7 +20,7 @@
 }
 
 .c-button__loading-message {
-  display: inline-flex;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  color: white;
 }

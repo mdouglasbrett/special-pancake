@@ -1,14 +1,5 @@
 import shapeData from '../utils/shapeData';
 
-export const fetchItems = () => {
-  return {
-    type: 'FETCH_ITEMS',
-    payload: {
-      isFetching: true
-    }
-  }
-};
-
 export const receiveItems = (response) => {
   if (response.items) {
     return {
@@ -52,8 +43,8 @@ export const toggleFilter = (id) => (dispatch, getState) => {
   }
 };
 
-const getItemsError = (error) => {
-  console.log('There was an error: ', error);
+// TODO: error handling here
+const getItemsError = () => {
   return {
     type: 'GET_ITEMS_ERROR',
     payload: {
@@ -63,7 +54,6 @@ const getItemsError = (error) => {
 };
 
 const getItemsRequest = () => {
-  console.log('Request started');
   return {
     type: 'GET_ITEMS_REQUEST',
     payload: {
